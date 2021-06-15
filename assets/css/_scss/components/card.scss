@@ -1,0 +1,26 @@
+.block-tri-color {
+    position: relative;
+    background-color: $color-orange-primary;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: -8px;
+        right: 8px;
+        left: 8px;
+        height: 100%;
+        background-color: $color-orange-secondary;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        bottom: -16px;
+        right: 16px;
+        left: 16px;
+        height: 100%;
+        background-color: $color-orange-optional;
+    }
+}

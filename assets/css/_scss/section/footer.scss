@@ -1,0 +1,38 @@
+.footer-wrapper {
+    background-image: url('../images/bg-footer.png');
+    @include bg-image;
+}
+
+.footer-inner {
+    background-color: rgba($color: $color-orange-primary, $alpha: .9);
+    padding: 50px 0 20px 0;
+}
+
+.block-footer {
+    .footer-header {
+        margin-bottom: 20px;
+
+        .title {
+            margin-bottom: 0;
+            color: $color-white;
+        }
+    }
+
+    .footer-body {
+        color: $color-white;
+
+        .description {
+            color: $color-white;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.copyright-wrap {
+    background-color: $color-orange-secondary;
+    padding: 15px 0;
+
+    .copyright {
+        color: $color-white;
+    }
+}

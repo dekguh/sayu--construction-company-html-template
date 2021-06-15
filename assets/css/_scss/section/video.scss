@@ -1,0 +1,108 @@
+.video-inner {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .video-image {
+        flex: 1 1 50%;
+        margin-bottom: 50px;
+
+        .background-img {
+            background-image: url('../images/bg-video.jpeg');
+            @include bg-image;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .video-content {
+        flex: 1 1 50%;
+        position: relative;
+        margin-top: 50px;
+        margin-left: -100px;
+        background-color: $color-gray-primary;
+        padding: 80px 80px;
+    }
+}
+
+.button-play {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 4px solid $color-orange-primary;
+    border-radius: 50%;
+    transition: .5s;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        width: 80px;
+        height: 80px;
+        border: 4px solid $color-orange-primary;
+        border-radius: 50%;
+        animation: button-play-ripple 1.5s infinite linear;
+    }
+
+    &:hover {
+        border-color: $color-orange-secondary;
+
+        &::after {
+            animation-duration: .8s;
+        }
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        font-size: 31px;
+    }
+}
+
+@keyframes button-play-ripple {
+    100% {
+        transform: translate(-50%, -50%) scale(1.8);
+        -webkit-transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes button-play-ripple {
+    100% {
+        transform: translate(-50%, -50%) scale(1.8);
+        -webkit-transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+}
+
+@media (max-width: $media-991) {
+    .video-inner {
+        flex-flow: column;
+
+        .video-image {
+            flex: 1 1 100%;
+            margin-bottom: 0;
+
+            .background-img {
+                height: 400px;
+            }
+        }
+
+        .video-content {
+            flex: 1 1 100%;
+            margin-top: 0;
+            margin-left: 0;
+            padding: 80px 30px;
+        }
+    }
+}

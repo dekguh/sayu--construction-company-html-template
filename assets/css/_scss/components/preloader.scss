@@ -1,0 +1,128 @@
+.preloader-wrapper {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+}
+
+.preloader-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+%preloader-block {
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.preloader-block-1 {
+    @extend %preloader-block;
+    background-color: $color-orange-primary;
+    margin-right: 8px;
+    animation: preloader-1 3s infinite linear;
+}
+
+.preloader-block-2 {
+    @extend %preloader-block;
+    background-color: $color-orange-secondary;
+    margin-right: 8px;
+    animation: preloader-2 3s infinite linear;
+}
+
+.preloader-block-3 {
+    @extend %preloader-block;
+    background-color: $color-orange-optional;
+    animation: preloader-3 3s infinite linear;
+}
+
+@keyframes preloader-1 {
+    0% {
+        background-color: $color-orange-primary;
+    }
+
+    33% {
+        background-color: $color-orange-secondary;
+    }
+
+    66% {
+        background-color: $color-orange-optional;
+    }
+}
+
+@-webkit-keyframes preloader-1 {
+    0% {
+        background-color: $color-orange-primary;
+    }
+
+    33% {
+        background-color: $color-orange-secondary;
+    }
+
+    66% {
+        background-color: $color-orange-optional;
+    }
+}
+
+@keyframes preloader-2 {
+    0% {
+        background-color: $color-orange-secondary;
+    }
+
+    33% {
+        background-color: $color-orange-optional;
+    }
+
+    66% {
+        background-color: $color-orange-primary;
+    }
+}
+
+@-webkit-keyframes preloader-2 {
+    0% {
+        background-color: $color-orange-secondary;
+    }
+
+    33% {
+        background-color: $color-orange-optional;
+    }
+
+    66% {
+        background-color: $color-orange-primary;
+    }
+}
+
+@keyframes preloader-3 {
+    0% {
+        background-color: $color-orange-optional;
+    }
+
+    33% {
+        background-color: $color-orange-primary;
+    }
+
+    66% {
+        background-color: $color-orange-secondary;
+    }
+}
+
+@-webkit-keyframes preloader-3 {
+    0% {
+        background-color: $color-orange-optional;
+    }
+
+    33% {
+        background-color: $color-orange-primary;
+    }
+
+    66% {
+        background-color: $color-orange-secondary;
+    }
+}

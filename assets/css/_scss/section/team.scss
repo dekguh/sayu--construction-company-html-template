@@ -1,0 +1,55 @@
+.block-team-wrap {
+    display: flex;
+    flex: row nowrap;
+
+    .block-photo {
+        position: relative;
+        z-index: 1;
+        flex: 0 1 auto;
+        margin-bottom: 30px;
+
+        .photo {
+            width: 100%;
+            max-width: 120px;
+        }
+    }
+
+    &:hover {
+        .block-detail {
+            margin-top: 15px;
+        }
+    }
+
+    .block-detail {
+        flex: 1 1 auto;
+        background-color: $color-white;
+        box-shadow: 0 0 12px rgba($color: #000000, $alpha: .06);
+        margin-top: 30px;
+        margin-left: -20px;
+        padding: 20px 20px 20px 40px;
+        transition: .5s;
+
+        .title {
+            margin-bottom: 8px;
+        }
+
+        .position {
+            color: $color-orange-primary;
+        }
+
+        .position {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+@media (max-width: $media-575) {
+    .block-team-wrap {
+        .block-photo {
+            .photo {
+                width: 80px;
+            }
+        }
+    }
+}

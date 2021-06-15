@@ -1,0 +1,40 @@
+.form-control {
+    height: 100%;
+    padding: 13px 20px !important;
+    border-radius: 0;
+    border-color: $color-gray-secondary;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $color-orange-primary;
+    }
+}
+
+.form-icon {
+    position: relative;
+    border: 1px solid transparent;
+
+    .button-icon {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-orange-primary;
+        transition: color .5s;
+
+        &:hover {
+            color: $color-orange-secondary;
+        }
+    }
+
+    .form-control {
+        padding: 20px 40px 20px 25px!important;
+    }
+}
+
+.radius-rounded {
+    border-radius: 30px;
+}

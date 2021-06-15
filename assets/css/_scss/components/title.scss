@@ -1,0 +1,24 @@
+.title-section {
+    .title-label {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: $color-white;
+        background-color: $color-orange-primary;
+        padding: 8px 20px;
+    }
+
+    .title {
+        margin-bottom: 0;
+        padding: 0 15px;
+        border-right: 4px solid $color-orange-primary;
+        border-left: 4px solid $color-orange-primary;
+    }
+}
+
+@media (max-width: $media-767) {
+    .title-section {
+        .title {
+            font-size: $size-h3;
+        }
+    }
+}

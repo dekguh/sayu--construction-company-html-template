@@ -1,0 +1,217 @@
+a {
+    &.button {
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+.button {
+    position: relative;
+    background-color: transparent;
+    padding: 13px $spacing-25;
+    border: 1px solid transparent;
+    transition: .5s;
+
+    .button-text {
+        position: relative;
+        z-index: 5;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: scale(.5);
+        transition: .5s;
+    }
+
+    &.button-primary {
+        color: $color-white;
+        border-color: $color-orange-primary;
+        background-color: $color-orange-primary;
+
+        &:hover {
+            color: $color-white;
+            border-color: $color-orange-secondary;
+
+            &::before {
+                border-radius: 0;
+                transform: scale(1);
+                background-color: $color-orange-secondary;
+            }
+        }
+    }
+
+    &.button-outline-primary {
+        color: $color-orange-primary;
+        border-color: $color-orange-primary;
+
+        &:hover {
+            color: $color-orange-secondary;
+            border-color: $color-orange-secondary;
+        }
+    }
+}
+
+.button-link {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-orange-primary;
+    padding-bottom: $spacing-4;
+    text-decoration: none;
+    border-bottom: 1px solid $color-orange-primary;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button-link-white {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    padding-bottom: $spacing-4;
+    text-decoration: none;
+    border-bottom: 1px solid $color-white;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.owl-carousel {
+    .owl-nav {
+        margin-top: 30px;
+
+        button {
+            &.owl-next {
+                margin: 0;
+                color: $color-orange-primary;
+                font-size: 21px;
+
+                &:hover {
+                    color: $color-orange-secondary;
+                    background: none;
+                }
+            }
+
+            &.owl-prev {
+                margin: 0 15px 0 0;
+                color: $color-orange-primary;
+                font-size: 21px;
+
+                &:hover {
+                    color: $color-orange-secondary;
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+.button-to-top {
+    position: fixed;
+    z-index: 99;
+    right: 30px;
+    bottom: 30px;
+    border: 1px solid $color-orange-primary;
+    background: $color-orange-secondary;
+    padding: 8px 15px;
+    color: $color-white;
+    transition: .5s;
+
+    &:hover {
+        background-color: $color-orange-primary;
+        border-color: $color-orange-primary;
+    }
+}
+
+.button-download {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: $color-orange-primary;
+    color: $color-white;
+    justify-content: stretch;
+
+    .block-icon {
+        position: relative;
+        width: 80px;
+        color: $color-white;
+        background-color: $color-orange-secondary;
+        transition: .5s;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            font-size: 21px;
+        }
+    }
+
+    .button-text {
+        flex: 1 1 auto;
+        padding: 20px;
+        width: 100%;
+        color: $color-white;
+        text-align: center;
+        transition: .5s;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .block-icon {
+            background-color: $color-orange-primary;
+        }
+
+        .button-text {
+            background-color: $color-orange-secondary;
+        }
+    }
+}
+
+.page-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .page-prev {
+        flex: 0 1 auto;
+
+        a {
+            padding: 8px 15px;
+            color: $color-white;
+            background-color: $color-orange-primary;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+            &:hover {
+                background-color: $color-orange-secondary;
+            }
+        }
+    }
+
+    .page-next {
+        flex: 0 1 auto;
+
+        a {
+            padding: 8px 15px;
+            color: $color-white;
+            background-color: $color-orange-primary;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            &:hover {
+                background-color: $color-orange-secondary;
+            }
+        }
+    }
+}

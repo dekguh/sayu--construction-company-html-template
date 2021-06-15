@@ -1,0 +1,66 @@
+.contact-inner {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .contact-map {
+        position: relative;
+        z-index: -1;
+        flex: 1 1 50%;
+
+        .map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+
+    .contact-content {
+        flex: 1 1 50%;
+        padding: 80px;
+        background-color: $color-gray-primary;
+        margin: 50px 0 50px -100px;
+    }
+
+    .block-call {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        padding: 20px;
+        background-color: $color-orange-primary;
+
+        .text-1 {
+            display: block;
+            font-size: 21px;
+            font-weight: 700;
+            color: $color-white;
+            margin-bottom: 8px;
+        }
+
+        .text-2 {
+            display: block;
+            color: $color-white;
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: $media-991) {
+    .contact-inner {
+        flex-flow: column nowrap;
+
+        .contact-map {
+            flex: 1 1 100%;
+
+            .map {
+                height: 400px;
+            }
+        }
+
+        .contact-content {
+            flex: 1 1 100%;
+            margin: -10px 0 0 0;
+            padding: 80px 30px;
+        }
+    }
+}

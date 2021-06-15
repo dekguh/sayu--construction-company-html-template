@@ -1,0 +1,17 @@
+.block-sidebar {
+    &.with-block {
+        padding: 20px;
+        background-color: $color-white;
+        box-shadow: 0 0 12px rgba($color: #000000, $alpha: .06);
+
+        .block-header {
+            border-bottom: 1px solid $color-orange-primary;
+            margin-bottom: 20px;
+
+            .title {
+                margin-bottom: 0;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

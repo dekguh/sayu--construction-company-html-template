@@ -1,0 +1,303 @@
+.about-owner {
+    margin-bottom: 30px;
+
+    &.style-2 {
+        margin-bottom: 0;
+    }
+
+    .owner-detail {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: $color-orange-primary;
+        }
+
+        .owner-photo {
+            width: 80px;
+            border-radius: 50%;
+        }
+
+        .owner-bio {
+            margin-left: 15px;
+
+            .name {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .owner-message {
+        color: $color-black-optional;
+        font-style: italic;
+    }
+}
+
+.about-image-wrap {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 150px;
+
+    &.style-2 {
+        padding-bottom: 0;
+    }
+}
+
+.about-image-style {
+    background-image: url('../images/bg-about-1.jpeg');
+    @include bg-image;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.about-content-image {
+    position: relative;
+    background-image: url('../images/bg-about-2.jpeg');
+    @include bg-image;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-left: -200px;
+}
+
+.block-about-experience {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: $color-orange-primary;
+
+    .year {
+        position: relative;
+        display: block;
+        flex: 0 1 auto;
+        font-size: 37px;
+        font-weight: 700;
+        color: $color-white;
+
+        &::after {
+            content: '+';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            color: $color-white;
+            font-size: 16px;
+        }
+    }
+
+    .text {
+        flex: 1 1 auto;
+        margin-left: 20px;
+
+        .text-1 {
+            display: block;
+            color: $color-white;
+        }
+
+        .text-2 {
+            display: block;
+            color: $color-white;
+        }
+    }
+}
+
+.about-image-style-2 {
+    @include bg-image;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &.bg-image-1 {
+        background-image: url('../images/bg-about-1.jpeg');
+    }
+
+    &.bg-image-2 {
+        background-image: url('../images/bg-about-2.jpeg');
+    }
+}
+
+.block-question-wrap {
+    background-color: $color-white;
+    box-shadow: 0 0 12px rgba($color: #000000 , $alpha: .06);
+
+    .block-header {
+        .button-question {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: $color-white;
+            padding: 20px;
+            width: 100%;
+            border: none;
+
+            .title {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+                text-align: left;
+                transition: .5s;
+            }
+
+            .icon {
+                flex: 0 1 auto;
+                transition: .5s;
+            }
+
+            &:hover {
+                .title {
+                    color: $color-orange-primary;
+                }
+            }
+        }
+    }
+
+    .block-body {
+        display: none;
+        padding: 0 20px 20px 20px;
+
+        .description {
+            margin-bottom: 0;
+        }
+    }
+
+    &.active {
+        .block-header {
+            .button-question {
+                .title {
+                    color: $color-orange-primary;
+                }
+
+                .icon {
+                    color: $color-orange-primary;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+.vision-wrapper {
+    .title-section {
+        margin-bottom: 120px;
+    }
+}
+
+.vision-background-img {
+    background-image: url('../images/vision.jpg');
+    @include bg-image;
+    width: 100%;
+    height: 100%;
+}
+
+.block-vision-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: $color-white;
+    padding: 20px;
+    margin-top: -90px;
+
+    .vision {
+        flex: 1 1 auto;
+        margin-right: 10px;
+    }
+
+    .mission {
+        flex: 1 1 auto;
+        margin-left: 10px;
+    }
+
+    .title {
+        margin-bottom: 8px;
+    }
+
+    .description {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: $media-991) {
+    .about-owner {
+        margin-bottom: 0;
+    }
+
+    .about-content-image {
+        display: none;
+    }
+
+    .about-image-wrap {
+        height: 400px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .block-about-experience {
+        bottom: unset;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+    }
+
+    .about-question {
+        margin-bottom: 30px;
+    }
+
+    .vision-wrapper {
+        .title-section {
+            margin-bottom: 50px;
+        }
+    }
+
+    .vision-background-img {
+        height: 400px;
+    }
+
+    .block-vision-wrap {
+        padding: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: $media-767) {
+    .about-owner {
+        .owner-detail {
+            margin-bottom: 30px;
+
+            &::after {
+                right: 0;
+                top: unset;
+                bottom: -15px;
+                height: 4px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $media-575) {
+    .block-vision-wrap {
+        flex-flow: column nowrap;
+
+        .vision {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        .mission {
+            margin-left: 0;
+        }
+    }
+}
